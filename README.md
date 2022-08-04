@@ -1,4 +1,5 @@
-# react-tv-fast-image
+# @react4tv/react-tv-fast-image
+
 
 
 React4 SmartTV library best performant React image component, includes many utilities
@@ -17,9 +18,10 @@ Most of the browser's Image, <img/> element handles image caching by default. Ev
 
 ## Features
 
--  [x]Manager cache images.
--  [x]Preload images.
--  [x]Placeholder.
+-  [x] Using worker.
+-  [x] Manager cache images.
+-  [x] Preload images.
+-  [x] Placeholder.
 
 ## Installation
 
