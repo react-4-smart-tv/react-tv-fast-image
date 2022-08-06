@@ -23,18 +23,18 @@ const mainPlugins = [...basePlugins, createDefinePlugin('main')];
 
 const baseConfig = {
   mode: 'development',
-  entry: './src/image.manager',
+  entry: './src/index.ts',
   optimization: {
     splitChunks: false,
   },
   resolve: {
-    extensions: ['.ts', '.js'],
+    extensions: ['.ts', '.js', '.tsx'],
   },
   module: {
     strictExportPresence: true,
     rules: [
       {
-        test: /\.(ts|js)$/,
+        test: /\.(ts|js)x?$/i,
         exclude: [path.resolve(__dirname, 'node_modules')],
         loader: 'babel-loader',
         options: {
@@ -57,6 +57,7 @@ const baseConfig = {
                 },
               },
             ],
+            '@babel/preset-react',
           ],
           plugins: [
             [
@@ -93,6 +94,17 @@ const baseConfig = {
             ['@babel/plugin-proposal-optional-chaining'],
           ],
         },
+      },
+      {
+        test: /\.css$/,
+        use: [
+          {
+            loader: 'style-loader',
+          },
+          {
+            loader: 'css-loader',
+          },
+        ],
       },
     ],
   },

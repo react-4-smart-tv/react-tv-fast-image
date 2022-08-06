@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "esnext",
+    "target": "es5",
     "module": "commonjs",
     "declaration": true,
     "declarationMap": true,
@@ -8,11 +8,21 @@
     "strict": false,
     "strictNullChecks": true,
     "strictPropertyInitialization": true,
-    "lib": ["dom", "es2015"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "outDir": "./lib/",
     "allowSyntheticDefaultImports": true,
-    "emitDeclarationOnly": true
+    "emitDeclarationOnly": true,
+    "jsx": "react"
   },
-  "include": ["src/**/*"],
-  "exclude": ["node_modules", "dist/**/*", "demo/libs/**/*"]
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist/**/*",
+  ]
 }

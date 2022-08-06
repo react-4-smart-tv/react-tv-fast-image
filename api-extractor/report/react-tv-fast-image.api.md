@@ -5,36 +5,20 @@
 ```ts
 
 import { EventEmitter } from 'eventemitter3';
+import { default as React_2 } from 'react';
+import { SafeComponent } from '@react4tv/react-safe-component';
 
-// Warning: (ae-missing-release-tag) "WorkerManager" is exported by the package, but it is missing a release tag (@alpha, @beta, @public, or @internal)
-//
 // @public (undocumented)
-class WorkerManager extends EventEmitter {
-    constructor();
-    // (undocumented)
-    static clear(): void;
-    // (undocumented)
-    Events: {
-        preLoadImage: string;
-        loadImage: string;
-        loadImageSuccess: string;
-        loadImageError: string;
-    };
-    // (undocumented)
-    static getInstance(): WorkerManager;
-    // (undocumented)
-    getObjectURL(): string;
-    // Warning: (ae-forgotten-export) The symbol "ImageStore" needs to be exported by the entry point image.manager.d.ts
-    //
-    // (undocumented)
-    getStoreCache(): ImageStore | undefined;
-    // (undocumented)
-    loadImage(url: string): void;
-    // (undocumented)
-    preloadImages(urls: string[]): void;
-}
-export { WorkerManager }
-export default WorkerManager;
+const _default: {
+    WorkerManager: typeof WorkerManager;
+    ProgressiveImage: typeof ProgressiveImage;
+};
+export default _default;
+
+// Warnings were encountered during analysis:
+//
+// src/index.ts:2:56 - (ae-forgotten-export) The symbol "ProgressiveImage" needs to be exported by the entry point index.d.ts
+// src/index.ts:4:5 - (ae-forgotten-export) The symbol "WorkerManager" needs to be exported by the entry point index.d.ts
 
 // (No @packageDocumentation comment for this package)
 
